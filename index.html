@@ -12,7 +12,7 @@
 	<div id="root">
 		<div class="slider">
 			<div class="slide">
-				<img v-bind:src="arrSlide[element].img" alt="">
+				<img v-bind:src="arrSlide[elementOrder].img" alt="">
 				<div class="slide-contents">
 					<h2 class="slide-title">{{ arrSlide.title }}</h2>
 					<p class="slide-text">{{ arrSlide.text }}</p>
@@ -20,8 +20,8 @@
 			</div>
 
 			<div class="thumbs">
-				<div v-for='(item, index) in arrSlide'class="thumb active">
-					<img v-bind:src="item.img" alt="Svezia">
+				<div v-for='(item, index) in arrSlide' @click='elementOrder = index' :class="index == elementOrder ? 'active' : ''" class="thumb">
+					<img v-bind:src="item.img" alt="">
 				</div>
 
 				<button class="btn-control btn-previus">&and;</button>

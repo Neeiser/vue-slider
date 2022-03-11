@@ -1,7 +1,7 @@
 const root = new Vue({
     el: '#root',
     data: {
-        element: 0,
+        elementOrder: 0,
         arrSlide: [
             {
                 title: 'Svezia',
@@ -30,5 +30,8 @@ const root = new Vue({
             },
         ]
     },
+    methods:{
+        
+    }
 });
 
