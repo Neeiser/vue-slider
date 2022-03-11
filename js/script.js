@@ -31,7 +31,22 @@ const root = new Vue({
         ]
     },
     methods:{
+        farward(){
+            if(this.elementOrder == this.arrSlide.length - 1){
+                this.elementOrder = 0;
+            } else {
+                this.elementOrder++
+            }
+        },
+        backward(){
+            if(this.elementOrder == 0){
+                this.elementOrder = this.arrSlide.length - 1;
+            } else {
+                this.elementOrder--
+            }
+        },
         
     }
 });
+
 
