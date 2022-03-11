@@ -1,6 +1,7 @@
 const root = new Vue({
     el: '#root',
     data: {
+        timer: null,
         elementOrder: 0,
         arrSlide: [
             {
@@ -45,8 +46,12 @@ const root = new Vue({
                 this.elementOrder--
             }
         },
-        
+        slideShow: function(){
+            this.timer = setInterval(this.forward, 1000);
+        }
+    },
+    created(){
+        this.slideShow()
     }
 });
-
 
