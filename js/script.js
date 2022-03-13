@@ -45,14 +45,11 @@ const root = new Vue({
                 this.elementOrder--
             }
         },
-        autoSlider(){
+        setInterval(){
             if(this.elementOrder == this.arrSlide.length - 1){
                 this.elementOrder = 0;
             } else {
                 this.elementOrder++
-            }
-        },
+            } 1000},
     },
 });
-
-const Interval = setInterval(autoSlider, 2000);
