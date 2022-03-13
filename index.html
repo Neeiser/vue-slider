@@ -19,7 +19,7 @@
 				</div>
 			</div>
 
-			<div @mouseover='stopShow' class="thumbs">
+			<div @mouseout='slideShow' @mouseover='stopShow' class="thumbs">
 				<div v-for='(item, index) in arrSlide' @click='elementOrder = index' 
 				:class="index == elementOrder ? 'active' : ''" class="thumb">
 					<img v-bind:src="item.img" alt="">
@@ -29,7 +29,7 @@
 				<button @click='forward' class="btn-control btn-next">&or;</button>
 			</div>
 		</div>
-		<div @mouseout='slideShow'></div>
+		<div ></div>
 	</div>
 	<!-- Link al CDN di Vue.js -->
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
