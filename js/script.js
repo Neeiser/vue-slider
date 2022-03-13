@@ -57,7 +57,7 @@ const root = new Vue({
             }
         },
         stopShow: function(){
-            this.timer= clearInterval(slideShow)
+            this.timer= clearInterval(this.slideShow)
         }
     },
     mounted: function (){
