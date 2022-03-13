@@ -28,7 +28,7 @@ const root = new Vue({
                 img: 'img/05.jpg',
                 text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
             },
-        ]
+        ],
     },
     methods:{
         forward(){
@@ -45,11 +45,14 @@ const root = new Vue({
                 this.elementOrder--
             }
         },
-        setInterval(){
-            if(this.elementOrder == this.arrSlide.length - 1){
-                this.elementOrder = 0;
-            } else {
-                this.elementOrder++
-            } 1000},
+        slideShow: function() {
+            setInterval(function(){
+                if(this.elementOrder == this.arrSlide.length - 1){
+                    this.elementOrder = 0;
+                } else {
+                    this.elementOrder++
+                }
+            }, 1000)
+        },
     },
 });
