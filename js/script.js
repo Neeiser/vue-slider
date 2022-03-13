@@ -47,7 +47,7 @@ const root = new Vue({
             }
         },
         slideShow: function() {
-            this.timer = setInterval(this.increment, 5000)
+            this.timer = setInterval(this.increment, 2000)
         },
         increment: function(){
             if(this.elementOrder == this.arrSlide.length - 1){
