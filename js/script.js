@@ -31,7 +31,7 @@ const root = new Vue({
         ]
     },
     methods:{
-        farward(){
+        forward(){
             if(this.elementOrder == this.arrSlide.length - 1){
                 this.elementOrder = 0;
             } else {
@@ -45,13 +45,17 @@ const root = new Vue({
                 this.elementOrder--
             }
         },
-    }   
+    },
+    created: setInterval(autoSlider, 1000),
+    
+    created: function autoSlider() {
+        this.elementOrder++
+    },
+
+    
+    
+    
+    
+    
+    
 });
-
-
-const myInterval = setInterval(myTimer, 1000);
-
-function myTimer() {
-    arrSlide.ele++
-    return arrSlide.ele++
-}
