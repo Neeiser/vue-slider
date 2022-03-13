@@ -19,7 +19,7 @@
 				</div>
 			</div>
 
-			<div class="thumbs">
+			<div @mouseover='stopShow' class="thumbs">
 				<div v-for='(item, index) in arrSlide' @click='elementOrder = index' 
 				:class="index == elementOrder ? 'active' : ''" class="thumb">
 					<img v-bind:src="item.img" alt="">

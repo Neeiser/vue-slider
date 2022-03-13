@@ -56,6 +56,9 @@ const root = new Vue({
                 this.elementOrder++
             }
         },
+        stopShow: function(){
+            this.timer= clearInterval(slideShow)
+        }
     },
     mounted: function (){
         this.slideShow();
