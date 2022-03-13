@@ -64,3 +64,10 @@ const root = new Vue({
         this.slideShow();
     }
 });
+
+/* 
+Il metodo per fare lo slide show l'ho preso da qua:
+
+https://matthiashager.com/image-slider-vuejs-tutorial
+
+ */
