@@ -2,6 +2,7 @@ const root = new Vue({
     el: '#root',
     data: {
         elementOrder: 0,
+        timer: null,
         arrSlide: [
             {
                 title: 'Svezia',
@@ -46,13 +47,17 @@ const root = new Vue({
             }
         },
         slideShow: function() {
-            setInterval(function(){
-                if(this.elementOrder == this.arrSlide.length - 1){
-                    this.elementOrder = 0;
-                } else {
-                    this.elementOrder++
-                }
-            }, 1000)
+            this.timer = setInterval(this.increment, 5000)
+        },
+        increment: function(){
+            if(this.elementOrder == this.arrSlide.length - 1){
+                this.elementOrder = 0;
+            } else {
+                this.elementOrder++
+            }
         },
     },
+    mounted: function (){
+        this.slideShow();
+    }
 });
